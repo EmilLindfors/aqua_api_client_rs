@@ -2,13 +2,12 @@ use crate::error::{Error, Result};
 use crate::fish_health::*;
 use crate::vessel::*;
 use lazy_static::lazy_static;
-use reqwest::{Client as ReqwestClient, RequestBuilder};
+use reqwest::{Client as ReqwestClient};
 use serde::Serialize;
 use serde::{de::DeserializeOwned, Deserialize};
 use std::collections::HashMap;
 use std::sync::Mutex;
 use std::time::{Duration, Instant};
-use std::vec;
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct LiceDistribution {
@@ -208,7 +207,7 @@ impl Client {
 
             Ok(res.into())
         } else {
-            let mut res: Vec<BwApiApiVesselTrackWeeksModelsVesselTrackLocalityWeek> = self
+            let res: Vec<BwApiApiVesselTrackWeeksModelsVesselTrackLocalityWeek> = self
                 .get(&format!("/fishhealth/locality/{locality_no}/vessel/{year}"))
                 .await?;
 

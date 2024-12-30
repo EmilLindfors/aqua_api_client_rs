@@ -100,6 +100,25 @@ dependencies = [
 ]
 
 [[package]]
+name = "aqua_api_client"
+version = "0.1.0"
+dependencies = [
+ "chrono",
+ "clap",
+ "csv",
+ "dotenvy",
+ "lazy_static",
+ "prettyplease",
+ "reqwest",
+ "schemars",
+ "serde",
+ "serde_json",
+ "syn",
+ "tokio",
+ "typify",
+]
+
+[[package]]
 name = "atomic-waker"
 version = "1.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -124,25 +143,6 @@ dependencies = [
  "object",
  "rustc-demangle",
  "windows-targets",
-]
-
-[[package]]
-name = "barentswatch_rs"
-version = "0.1.0"
-dependencies = [
- "chrono",
- "clap",
- "csv",
- "dotenvy",
- "lazy_static",
- "prettyplease",
- "reqwest",
- "schemars",
- "serde",
- "serde_json",
- "syn",
- "tokio",
- "typify",
 ]
 
 [[package]]

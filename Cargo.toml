@@ -1,8 +1,15 @@
 [package]
-name = "barentswatch_rs"
+name = "aqua_api_client"
 version = "0.1.0"
 edition = "2021"
 repository = "https://github.com/EmilLindfors/aqua_api_client_rs.git"
+authors = ["Emil Lindfors < [email protected]>"]
+
+[package.metadata.wix]
+upgrade-guid = "54B2FAD0-4A20-488F-8677-775FDA88EAAE"
+path-guid = "39DD6682-F2D8-4EB5-A1B8-F433C39C6081"
+license = false
+eula = false
 
 [dependencies]
 chrono =  {version = "0.4.39", features = ["serde"]}
@@ -23,7 +30,7 @@ syn = "2.0"
 typify = "0.3"
 
 [[bin]]
-name = "barentswatch_rs"
+name = "aac"
 path = "bin/cli.rs"
 
 # The profile that 'dist' will build with

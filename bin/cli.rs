@@ -1,7 +1,6 @@
-use barentswatch_rs::{
+use aqua_api_client::{
     client::{Client, ClientConfig},
-    error::Error,
-    fish_health::*,
+    error::Error
 };
 use clap::{Parser, Subcommand};
 use csv::Writer;

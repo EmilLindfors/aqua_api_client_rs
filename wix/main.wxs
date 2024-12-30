@@ -60,7 +60,7 @@
 
     <Product
         Id='*'
-        Name='barentswatch_rs'
+        Name='aqua_api_client'
         UpgradeCode='54B2FAD0-4A20-488F-8677-775FDA88EAAE'
         Manufacturer='Emil Lindfors'
         Language='1033'
@@ -82,11 +82,11 @@
             DowngradeErrorMessage='A newer version of [ProductName] is already installed. Setup will now exit.'/>
 
         <Media Id='1' Cabinet='media1.cab' EmbedCab='yes' DiskPrompt='CD-ROM #1'/>
-        <Property Id='DiskPrompt' Value='barentswatch_rs Installation'/>
+        <Property Id='DiskPrompt' Value='aqua_api_client Installation'/>
 
         <Directory Id='TARGETDIR' Name='SourceDir'>
             <Directory Id='$(var.PlatformProgramFilesFolder)' Name='PFiles'>
-                <Directory Id='APPLICATIONFOLDER' Name='barentswatch_rs'>
+                <Directory Id='APPLICATIONFOLDER' Name='aqua_api_client'>
                     
                     <!--
                       Enabling the license sidecar file in the installer is a four step process:
@@ -122,9 +122,9 @@
                         <Component Id='binary0' Guid='*'>
                             <File
                                 Id='exe0'
-                                Name='barentswatch_rs.exe'
+                                Name='aac.exe'
                                 DiskId='1'
-                                Source='$(var.CargoTargetBinDir)\barentswatch_rs.exe'
+                                Source='$(var.CargoTargetBinDir)\aac.exe'
                                 KeyPath='yes'/>
                         </Component>
                     </Directory>

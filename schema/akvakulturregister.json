@@ -1,0 +1,1506 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "ErrorResponse": {
+            "type": "object",
+            "properties": {
+                "message": {
+                    "type": "string",
+                    "description": "Error melding"
+                }
+            },
+            "description": "Error respons."
+        },
+        "AreaPlacement": {
+            "type": "object",
+            "properties": {
+                "municipalityCode": {
+                    "type": "string",
+                    "description": "Kommunenummeret som området er registrert til."
+                },
+                "municipalityName": {
+                    "type": "string",
+                    "description": "Kommunenavnet som området er registrert til."
+                },
+                "countyCode": {
+                    "type": "string",
+                    "description": "Fylkesnummeret som området er registrert til."
+                },
+                "countyName": {
+                    "type": "string",
+                    "description": "Fylkesnavnet som området er registrert til."
+                },
+                "prodAreaCode": {
+                    "type": "string",
+                    "description": "Produksjonsområdet som området er registrert til."
+                },
+                "prodAreaName": {
+                    "type": "string",
+                    "description": "Navnet på produksjonsområdet som området er registrert til."
+                },
+                "prodAreaStatus": {
+                    "type": "string",
+                    "description": "Statusen til produksjonsområdet."
+                }
+            },
+            "description": "Geografisk beskrivelse av området."
+        },
+        "FishCode": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string",
+                    "description": "Artskoden til gitt fisk, f.eks \"071101\"."
+                },
+                "latinName": {
+                    "type": "string",
+                    "description": "Det latinske navnet på fisken, f.eks. \"Salmo salar\"."
+                },
+                "nbNoName": {
+                    "type": "string",
+                    "description": "Fiskens navn på bokmål, f.eks. \"Laks\"."
+                },
+                "nnNoName": {
+                    "type": "string",
+                    "description": "Fiskens navn på nynorsk."
+                },
+                "enGbName": {
+                    "type": "string",
+                    "description": "Fiskens navn på engelsk, f.eks. \"Salmon\"."
+                }
+            },
+            "description": "Fiskekode."
+        },
+        "LatestLicenseSiteConnectionDetail": {
+            "type": "object",
+            "properties": {
+                "key": {
+                    "type": "string",
+                    "description": "Nøkkel"
+                },
+                "licenseId": {
+                    "type": "integer",
+                    "description": "Unik tillatelsesidentifikator.",
+                    "format": "int64"
+                },
+                "licenseNr": {
+                    "type": "string",
+                    "description": "Tillatelsesnummer"
+                },
+                "siteId": {
+                    "type": "integer",
+                    "description": "Unik lokalitets-identifikator.",
+                    "format": "int64"
+                },
+                "siteNr": {
+                    "type": "string",
+                    "description": "Lokalitetsnummer"
+                },
+                "siteName": {
+                    "type": "string",
+                    "description": "Lokalitetsnavn"
+                },
+                "validFrom": {
+                    "type": "string",
+                    "description": "Tidsstempel for når lokalitetstilkoblingen ble gyldig."
+                },
+                "validUntil": {
+                    "type": "string",
+                    "description": "Tidsstempel for når lokalitetstilkoblingen er gyldig til."
+                },
+                "temporaryUntil": {
+                    "type": "string",
+                    "description": "Tidsstempel for når lokalitetstilkoblingen er midlertidig gyldig til."
+                },
+                "registeredTime": {
+                    "type": "string",
+                    "description": "Tidsstempel for nå lokalitetstilkoblingen ble registrert til gitt lokalitet."
+                },
+                "active": {
+                    "type": "boolean",
+                    "description": "Om lokalitetstilkoblingen til tillatelsen er aktiv."
+                },
+                "status": {
+                    "type": "string",
+                    "description": "Status på lokalitetstilkoblingene til tillatelsen."
+                },
+                "statusValue": {
+                    "type": "string",
+                    "description": "Statusverdi"
+                }
+            },
+            "description": "Detaljert informasjon om lokalitetstilkoblingen som senest ble registrert til gitt lokalitet."
+        },
+        "Site": {
+            "type": "object",
+            "properties": {
+                "siteId": {
+                    "type": "integer",
+                    "description": "Unik lokalitets identifikator",
+                    "format": "int64"
+                },
+                "versionId": {
+                    "type": "integer",
+                    "description": "Versjons ID",
+                    "format": "int64"
+                },
+                "siteNr": {
+                    "type": "integer",
+                    "description": "Lokalitetsnummer",
+                    "format": "int32"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Navnet på lokaliteten"
+                },
+                "placementType": {
+                    "type": "string",
+                    "description": "Plasseringstypen til lokaliteten"
+                },
+                "placementTypeValue": {
+                    "type": "string",
+                    "description": "Plasseringstypeverdien til lokaliteten"
+                },
+                "waterType": {
+                    "type": "string",
+                    "description": "Vanntype som benyttes på lokaliteten"
+                },
+                "waterTypeValue": {
+                    "type": "string",
+                    "description": "Vanntypeverdien på lokaliteten"
+                },
+                "firstClearanceTime": {
+                    "type": "string",
+                    "description": "Første klareringstiden til lokaliteten"
+                },
+                "firstClearanceType": {
+                    "type": "string",
+                    "description": "Første klareringstypen til lokaliteten"
+                },
+                "firstClearanceTypeValue": {
+                    "type": "string",
+                    "description": "Første klareringstypeverdien til lokaliteten"
+                },
+                "latitude": {
+                    "type": "number",
+                    "description": "Breddegrad",
+                    "format": "double"
+                },
+                "longitude": {
+                    "type": "number",
+                    "description": "Lengdegrad",
+                    "format": "double"
+                },
+                "capacity": {
+                    "type": "number",
+                    "description": "Kapasiteten til lokaliteten",
+                    "format": "double"
+                },
+                "tempCapacity": {
+                    "type": "number",
+                    "description": "Den midlertidige kapasiteten til lokaliteten",
+                    "format": "double"
+                },
+                "capacityUnitType": {
+                    "type": "string",
+                    "description": "Kapasitets enhetstype"
+                },
+                "placement": {
+                    "$ref": "#/components/schemas/AreaPlacement"
+                },
+                "speciesType": {
+                    "type": "string",
+                    "description": "Artstype"
+                },
+                "speciesTypeValue": {
+                    "type": "string",
+                    "description": "Artstypeverdi"
+                },
+                "speciesLimitations": {
+                    "type": "array",
+                    "description": "Artsbegrensninger",
+                    "items": {
+                        "$ref": "#/components/schemas/FishCode"
+                    }
+                },
+                "connections": {
+                    "type": "array",
+                    "description": "Forbindelsene til lokaliteten",
+                    "items": {
+                        "$ref": "#/components/schemas/LatestLicenseSiteConnectionDetail"
+                    }
+                },
+                "obsoleteConnections": {
+                    "type": "array",
+                    "description": "Utdaterte forbindelser til lokaliteten",
+                    "items": {
+                        "$ref": "#/components/schemas/LatestLicenseSiteConnectionDetail"
+                    }
+                },
+                "version": {
+                    "$ref": "#/components/schemas/VersionDetail"
+                },
+                "isSlaughtery": {
+                    "type": "boolean",
+                    "description": "Om lokalitet er slakteri eller ikke"
+                },
+                "hasCommercialActivity": {
+                    "type": "boolean",
+                    "description": "Om lokaliteten har kommersiell aktivitet eller ikke"
+                },
+                "hasColocation": {
+                    "type": "boolean",
+                    "description": "Om lokaliteten er en del av samlokalitet"
+                },
+                "hasJointOperation": {
+                    "type": "boolean",
+                    "description": "Om lokaliteten har felles drift med annen lokalitet"
+                }
+            },
+            "description": "Lokalitet"
+        },
+        "VersionDetail": {
+            "type": "object",
+            "properties": {
+                "validFrom": {
+                    "type": "string",
+                    "description": "Tidsstempel for når disse versjonsdataene er gyldig fra."
+                },
+                "validUntil": {
+                    "type": "string",
+                    "description": "Tidsstempel for når disse versjonsdataene er gyldig til."
+                },
+                "temporaryUntil": {
+                    "type": "string",
+                    "description": "Tidsstempel for når disse versjonsdataene er midlertidig gyldig til."
+                },
+                "registeredTime": {
+                    "type": "string",
+                    "description": "Tidsstempel for disse versjonsdataene sin registrering."
+                },
+                "versionCauseType": {
+                    "type": "string",
+                    "description": "Årsakstypen til versjonsdataene."
+                },
+                "versionCauseTypeValue": {
+                    "type": "string",
+                    "description": "Årsakstypeverdien"
+                },
+                "status": {
+                    "type": "string",
+                    "description": "Status på versjonen av lokalitetsdataene."
+                },
+                "statusValue": {
+                    "type": "string",
+                    "description": "Statusverdi"
+                },
+                "versionableStatus": {
+                    "type": "string",
+                    "description": "Versjonsbar status"
+                },
+                "versionableStatusValue": {
+                    "type": "string",
+                    "description": "Versjonsbar statusverdi"
+                }
+            },
+            "description": "Detaljert informasjon om en bestemt versjon av forskjellige data."
+        },
+        "CapacityInfo": {
+            "type": "object",
+            "properties": {
+                "accumulated": {
+                    "type": "number",
+                    "description": "Akkumulert kapasitet.",
+                    "format": "double"
+                },
+                "current": {
+                    "type": "number",
+                    "description": "Nåværende kapasitet.",
+                    "format": "double"
+                },
+                "unit": {
+                    "type": "string",
+                    "description": "Enhet, f.eks. Tonn."
+                },
+                "type": {
+                    "type": "string",
+                    "description": "Kapasistetstypen"
+                }
+            },
+            "description": "Informasjon om kapasitet."
+        },
+        "LicenseConnectionForSite": {
+            "type": "object",
+            "properties": {
+                "connectionDetail": {
+                    "$ref": "#/components/schemas/LatestLicenseSiteConnectionDetail"
+                },
+                "legacyLicenseNr": {
+                    "type": "string",
+                    "description": "Arvet tillatelsesnummer."
+                },
+                "legalEntityNrId": {
+                    "type": "string",
+                    "description": "Juridisk-enhetsnummer-identifikator"
+                },
+                "openLegalEntityNr": {
+                    "type": "string",
+                    "description": "Åpent juridisk enhetsnummer"
+                },
+                "legalEntityName": {
+                    "type": "string",
+                    "description": "Juridisk enhetsnavn"
+                },
+                "capacity": {
+                    "$ref": "#/components/schemas/CapacityInfo"
+                },
+                "intention": {
+                    "type": "string",
+                    "description": "Formålet med benyttelsen av lokaliteten."
+                },
+                "intentionValue": {
+                    "type": "string",
+                    "description": "Formålsverdi"
+                },
+                "productionStage": {
+                    "type": "string",
+                    "description": "Produksjonsstadiet lokaliteten og dens forbindelser er på."
+                },
+                "productionStageValue": {
+                    "type": "string",
+                    "description": "Produksjonsstadie-verdi"
+                },
+                "tag": {
+                    "type": "string",
+                    "description": "Etikett."
+                },
+                "validFrom": {
+                    "type": "string",
+                    "description": "Tidsstempel for når tillatelsesforbindelsen er gyldig fra."
+                },
+                "validUntil": {
+                    "type": "string",
+                    "description": "Tidsstempel for når tillatelsesforbindelsen er gyldig til."
+                },
+                "temporaryUntil": {
+                    "type": "string",
+                    "description": "Tidsstempel for når tillatelsesforbindelsen er midlertidig gyldig til."
+                },
+                "status": {
+                    "type": "string",
+                    "description": "Status på tillatelsesforbindelsene til lokaliteten."
+                },
+                "statusValue": {
+                    "type": "string",
+                    "description": "Statusverdi"
+                }
+            },
+            "description": "Tillatelsesforbindelsene til en gitt lokalitet."
+        },
+        "SiteDecision": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "description": "Unik identifikator",
+                    "format": "int64"
+                },
+                "siteId": {
+                    "type": "integer",
+                    "description": "Unik lokalitets-identifikator",
+                    "format": "int64"
+                },
+                "siteNr": {
+                    "type": "integer",
+                    "description": "Lokalitetsnummer",
+                    "format": "int32"
+                },
+                "caseGrantedTime": {
+                    "type": "string",
+                    "description": "Tidsstempel for når vedtaket ble satt."
+                },
+                "caseType": {
+                    "type": "string",
+                    "description": "Sakstype"
+                },
+                "caseTypeValue": {
+                    "type": "string",
+                    "description": "Sakstypeverdi"
+                },
+                "validFrom": {
+                    "type": "string",
+                    "description": "Tidsstempel for når vedtaket er gyldig fra."
+                },
+                "validUntil": {
+                    "type": "string",
+                    "description": "Tidsstempel for når vedtaket er gyldig til."
+                },
+                "type": {
+                    "type": "string",
+                    "description": "Vedtakstype"
+                },
+                "typeValue": {
+                    "type": "string",
+                    "description": "Vedtakstype-verdi"
+                },
+                "registeredTime": {
+                    "type": "string",
+                    "description": "Tidsstempel for når vedtaket ble registrert."
+                },
+                "status": {
+                    "type": "string",
+                    "description": "Status på vedtaket."
+                },
+                "siteVersionId": {
+                    "type": "integer",
+                    "description": "Lokalitets-versjons-identifikator.",
+                    "format": "int64"
+                },
+                "statusValue": {
+                    "type": "string",
+                    "description": "Statusverdi"
+                }
+            },
+            "description": "Vedtak som gjelder for lokaliteten."
+        },
+        "BorderPoint": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "description": "Unik identifikator",
+                    "format": "int64"
+                },
+                "index": {
+                    "type": "integer",
+                    "description": "En indeks som representerer en unik identifikator for hvert grensepunkt.",
+                    "format": "int32"
+                },
+                "latitude": {
+                    "type": "number",
+                    "description": "Breddegrad",
+                    "format": "double"
+                },
+                "longitude": {
+                    "type": "number",
+                    "description": "Lengdegrad",
+                    "format": "double"
+                }
+            },
+            "description": "Grensepunkt beskrevet i bredde- og lengdegrad i desimalgrader."
+        },
+        "BorderType": {
+            "type": "object",
+            "properties": {
+                "value": {
+                    "type": "string"
+                }
+            },
+            "description": "Grensetype."
+        },
+        "SiteBorder": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "description": "Unik identifikator",
+                    "format": "int64"
+                },
+                "siteVersionId": {
+                    "type": "integer",
+                    "description": "Unik lokalitetsversjons-identifikator",
+                    "format": "int64"
+                },
+                "siteNr": {
+                    "type": "integer",
+                    "description": "Lokalitetsnummer",
+                    "format": "int32"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Navnet på lokaliteten."
+                },
+                "type": {
+                    "$ref": "#/components/schemas/BorderType"
+                },
+                "points": {
+                    "type": "array",
+                    "description": "Liste over grensepunkter for en gitt lokalitet.",
+                    "items": {
+                        "$ref": "#/components/schemas/BorderPoint"
+                    }
+                },
+                "areaM2": {
+                    "type": "number",
+                    "description": "Størrelsen på lokaliteten målt i kvadratmeter.",
+                    "format": "double"
+                }
+            },
+            "description": "Grensen til en gitt lokalitet."
+        },
+        "GrantInfo": {
+            "type": "object",
+            "properties": {
+                "capacity": {
+                    "type": "number",
+                    "description": "Tillatt kapasitet.",
+                    "format": "double"
+                },
+                "capacityUnit": {
+                    "type": "string",
+                    "description": "Enheten på kapasitetsmengden, f.eks. Tonn."
+                },
+                "capacityType": {
+                    "type": "string",
+                    "description": "Kapasitetstypen."
+                },
+                "grantedTime": {
+                    "type": "string",
+                    "description": "Tidsstempel på når tillatelsen ble gyldig."
+                },
+                "legalEntityNrId": {
+                    "type": "string",
+                    "description": "Juridisk-enhetsnummer-identifikator."
+                },
+                "openLegalEntityNr": {
+                    "type": "string",
+                    "description": "Åpent juridisk enhetsnummer"
+                },
+                "legalEntityName": {
+                    "type": "string",
+                    "description": "Navnet på den juridiske enheten"
+                }
+            },
+            "description": "Informasjon om tillatelser."
+        },
+        "LicenseDetail": {
+            "type": "object",
+            "properties": {
+                "licenseId": {
+                    "type": "integer",
+                    "description": "Unik tillatelses-identifikator",
+                    "format": "int64"
+                },
+                "versionId": {
+                    "type": "integer",
+                    "description": "Versjons-ID",
+                    "format": "int64"
+                },
+                "licenseNr": {
+                    "type": "string",
+                    "description": "Tillatelsesnummer"
+                },
+                "originalLicenseNr": {
+                    "type": "string",
+                    "description": "Tillatelsesnummer som ble brukt når tillatelsen ble registrert."
+                },
+                "legacyLicenseNr": {
+                    "type": "string",
+                    "description": "Arvet tillatelsesnummer"
+                },
+                "portfolioType": {
+                    "$ref": "#/components/schemas/LicensePortfolioType"
+                },
+                "portfolioMasterLicenseId": {
+                    "type": "integer",
+                    "description": "Identifikatoren for hovedtillatelsen i tillatelsesporteføljen.",
+                    "format": "int64"
+                },
+                "legalEntityNrId": {
+                    "type": "string",
+                    "description": "Juridisk-enhetsnummer-identifikator."
+                },
+                "openLegalEntityNr": {
+                    "type": "string",
+                    "description": "Åpent juridisk enhetsnummer."
+                },
+                "legalEntityName": {
+                    "type": "string",
+                    "description": "Juridisk enhetsnavn."
+                },
+                "productionRegime": {
+                    "type": "string",
+                    "description": "Informasjon om produksjonsregimet til tillatelsen."
+                },
+                "productionModel": {
+                    "type": "string",
+                    "description": "Informasjon om produksjonsmodellen til tillatelsen."
+                },
+                "capacity": {
+                    "$ref": "#/components/schemas/CapacityInfo"
+                },
+                "type": {
+                    "$ref": "#/components/schemas/LicenseTypeDetail"
+                },
+                "species": {
+                    "$ref": "#/components/schemas/SpeciesDetail"
+                },
+                "connections": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/components/schemas/LatestLicenseSiteConnectionDetail"
+                    }
+                },
+                "placement": {
+                    "$ref": "#/components/schemas/AreaPlacement"
+                },
+                "grantInformation": {
+                    "$ref": "#/components/schemas/GrantInfo"
+                },
+                "version": {
+                    "$ref": "#/components/schemas/VersionDetail"
+                }
+            },
+            "description": "Detaljert informasjon om tillatelser gitt til en innehaver."
+        },
+        "LicensePortfolioType": {
+            "type": "object",
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "description": "Verdi"
+                },
+                "apiSearchValue": {
+                    "type": "string",
+                    "description": "Verdi brukt til å spesifisere søknadskriterier ved forespørsel mot API."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Navnet på porteføljetypen."
+                }
+            },
+            "description": "Porteføljetypen til tillatelsen."
+        },
+        "LicenseTypeDetail": {
+            "type": "object",
+            "properties": {
+                "intention": {
+                    "type": "string",
+                    "description": "Unik identifikator for tillatelsestypen."
+                },
+                "intentionValue": {
+                    "type": "string",
+                    "description": "Formålsverdi"
+                },
+                "produces": {
+                    "type": "string",
+                    "description": "Informasjon om hva som blir produsert av denne typen tillatelse."
+                },
+                "producesValue": {
+                    "type": "string",
+                    "description": "Produksjonsprosess-verdi."
+                },
+                "productionStage": {
+                    "type": "string",
+                    "description": "Informasjon om den nåværende fasen av produksjonsprosessen."
+                },
+                "productionStageValue": {
+                    "type": "string",
+                    "description": "Produksjonsprosess verdi."
+                },
+                "tag": {
+                    "type": "string",
+                    "description": "Etikett f.eks. KOMM-MATF."
+                },
+                "allocationInformation": {
+                    "type": "string",
+                    "description": "Informasjon om fordelingen av ressurser eller kvoter på denne typen tillatelse."
+                },
+                "stocking": {
+                    "type": "string",
+                    "description": "Informasjon om lagringsprosessen på denne typen tillatelse."
+                },
+                "stockingValue": {
+                    "type": "string",
+                    "description": "Lagringsverdi"
+                },
+                "temporal": {
+                    "type": "string",
+                    "description": "Informasjon om midlertidig tillatelsestype."
+                },
+                "temporalValue": {
+                    "type": "string",
+                    "description": "Midlertidig verdi."
+                },
+                "feeding": {
+                    "type": "string",
+                    "description": "Informasjon om fôrforbruk på tillatelsen."
+                },
+                "feedingValue": {
+                    "type": "string",
+                    "description": "Fôrforbruk-verdi."
+                },
+                "templateId": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            },
+            "description": "Detaljert informasjon om tillatelsestypen."
+        },
+        "SpeciesDetail": {
+            "type": "object",
+            "properties": {
+                "compositionId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "fishCodes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/components/schemas/FishCode"
+                    }
+                }
+            }
+        },
+        "LicenseTransfers": {
+            "type": "object",
+            "properties": {
+                "ajourDate": {
+                    "type": "string",
+                    "description": "Ajour-dato for når overføringen av tillatelsen ble gjennomført."
+                },
+                "transfers": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/components/schemas/Transfer"
+                    }
+                }
+            },
+            "description": "Informasjon om overføringer av tillatelser mellom juridiske enheter."
+        },
+        "Transfer": {
+            "type": "object",
+            "properties": {
+                "journalNr": {
+                    "type": "string",
+                    "description": "Journal nummer for overføringen."
+                },
+                "journalDate": {
+                    "type": "string",
+                    "description": "Tidsstempel for når journalen ble gjort."
+                },
+                "identityNr": {
+                    "type": "string",
+                    "description": "Unikt identitetsnummer."
+                },
+                "officialName": {
+                    "type": "string",
+                    "description": "Offisielt navn."
+                }
+            },
+            "description": "Overføring av tillatelser mellom juridiske enheter."
+        },
+        "SiteConnectionForLicense": {
+            "type": "object",
+            "properties": {
+                "connectionDetail": {
+                    "$ref": "#/components/schemas/LatestLicenseSiteConnectionDetail"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Navn"
+                },
+                "capacity": {
+                    "type": "number",
+                    "description": "Kapasistet",
+                    "format": "double"
+                },
+                "tempCapacity": {
+                    "type": "number",
+                    "description": "Midlertidig kapasitet.",
+                    "format": "double"
+                },
+                "capacityUnitType": {
+                    "type": "string",
+                    "description": "Kapasitetens enhetstype f.eks. Tonn."
+                },
+                "placement": {
+                    "$ref": "#/components/schemas/AreaPlacement"
+                }
+            },
+            "description": "Informasjon om tillatelsens lokalitetstilknytninger."
+        },
+        "Lien": {
+            "type": "object",
+            "properties": {
+                "journalNr": {
+                    "type": "string",
+                    "description": "Journalnummer."
+                },
+                "journalDate": {
+                    "type": "string",
+                    "description": "Tidsstempel for journaldato for panteretten."
+                },
+                "amount": {
+                    "type": "number",
+                    "description": "Mengde som inngår i panteretten.",
+                    "format": "double"
+                },
+                "currency": {
+                    "type": "string",
+                    "description": "Valutaen som gjelder for verdien som er sikret av panteretten."
+                },
+                "registeredOwner": {
+                    "$ref": "#/components/schemas/RegisteredLicenseOwner"
+                },
+                "lienholder": {
+                    "$ref": "#/components/schemas/Lienholder"
+                }
+            },
+            "description": "Informasjon om panterett."
+        },
+        "LienHolders": {
+            "type": "object",
+            "properties": {
+                "ajourDate": {
+                    "type": "string",
+                    "description": "Ajour-dato for panteretten."
+                },
+                "liens": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/components/schemas/Lien"
+                    }
+                }
+            },
+            "description": "Informasjon om panterettholdere."
+        },
+        "Lienholder": {
+            "type": "object",
+            "properties": {
+                "orgNr": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "zipCode": {
+                    "type": "string"
+                },
+                "city": {
+                    "type": "string"
+                },
+                "country": {
+                    "type": "string"
+                }
+            }
+        },
+        "RegisteredLicenseOwner": {
+            "type": "object",
+            "properties": {
+                "orgNr": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "LicenseDecision": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "description": "Unik identifikator for vedtaket.",
+                    "format": "int64"
+                },
+                "caseGrantedTime": {
+                    "type": "string",
+                    "description": "Tidsstempel for den gitte fristen til saken."
+                },
+                "caseType": {
+                    "type": "string",
+                    "description": "Sakstype."
+                },
+                "caseTypeValue": {
+                    "type": "string",
+                    "description": "Sakstype verdi."
+                },
+                "validFrom": {
+                    "type": "string",
+                    "description": "Tidsstempel for når vedtaket er gyldig fra."
+                },
+                "validUntil": {
+                    "type": "string",
+                    "description": "Tidsstempel for når vedtaket er gyldig til."
+                },
+                "type": {
+                    "type": "string",
+                    "description": "Type vedtak."
+                },
+                "typeValue": {
+                    "type": "string",
+                    "description": "Verdien til denne typen vedtak."
+                },
+                "registeredTime": {
+                    "type": "string",
+                    "description": "Tidsstempel for når vedtaket ble registrert."
+                },
+                "status": {
+                    "type": "string",
+                    "description": "Status"
+                },
+                "licenseNr": {
+                    "type": "string",
+                    "description": "Tillatelsesnummer for tillatelsen som vedtaket gjelder for."
+                },
+                "decisionInRefToLicenseNr": {
+                    "type": "string",
+                    "description": "Vedtak i referanse til tillatelsesnummer."
+                },
+                "licenseVersionId": {
+                    "type": "integer",
+                    "description": "Unik tillatelsesversjons identifikator.",
+                    "format": "int64"
+                },
+                "licenseId": {
+                    "type": "integer",
+                    "description": "Unik tillatelses identifikator.",
+                    "format": "int64"
+                },
+                "statusValue": {
+                    "type": "string",
+                    "description": "Statusverdi."
+                }
+            },
+            "description": "Informasjon om vedtak for denne tillatelsen."
+        },
+        "LicenseCapacityHistory": {
+            "type": "object",
+            "properties": {
+                "accumulatedCapacity": {
+                    "type": "number",
+                    "description": "Den akkumulerte kapasiteten som tillatelsen har oppnådd.",
+                    "format": "double"
+                },
+                "currentCapacity": {
+                    "type": "number",
+                    "description": "Den nåværende kapasiteten til tillatelsen.",
+                    "format": "double"
+                },
+                "capacityUnitType": {
+                    "type": "string",
+                    "description": "Enhetstypen til kapasiteten f.eks. Tonn."
+                },
+                "capacityValueType": {
+                    "type": "string",
+                    "description": "Verditypen til kapasiteten."
+                },
+                "type": {
+                    "type": "string",
+                    "description": "Kapasitetstypen"
+                },
+                "typeValue": {
+                    "type": "string",
+                    "description": "Typeverdi."
+                },
+                "value": {
+                    "type": "number",
+                    "description": "Verdi",
+                    "format": "double"
+                },
+                "valueType": {
+                    "type": "string",
+                    "description": "Verditype"
+                },
+                "valueTypeValue": {
+                    "type": "string",
+                    "description": "Verdien til typeverdien."
+                },
+                "validFrom": {
+                    "type": "string",
+                    "description": "Tidsstempel for når tillatelsen ble gyldig fra."
+                },
+                "validUntil": {
+                    "type": "string",
+                    "description": "Tidsstempel for når tillatelsen er gyldig til."
+                },
+                "status": {
+                    "type": "string",
+                    "description": "Status"
+                },
+                "statusValue": {
+                    "type": "string",
+                    "description": "Statusverdi"
+                },
+                "atLeastFrom": {
+                    "type": "string"
+                },
+                "atLeastUntil": {
+                    "type": "string"
+                }
+            },
+            "description": "Kapasitetshistorikken til tillatelsen."
+        },
+        "LatestLicenseSiteConnectionOverview": {
+            "type": "object",
+            "properties": {
+                "licenseNr": {
+                    "type": "string",
+                    "description": "Tillatelsesnummer"
+                },
+                "siteNr": {
+                    "type": "string",
+                    "description": "Lokalitetsnummer"
+                },
+                "validFrom": {
+                    "type": "string",
+                    "description": "Tidsstempel for når den siste tilkoblingstillatelsen er gyldig fra."
+                },
+                "validUntil": {
+                    "type": "string",
+                    "description": "Tidsstempel for når den siste tilkoblingstillatelsen er gyldig til."
+                },
+                "temporaryUntil": {
+                    "type": "string",
+                    "description": "Tidsstempel for når den siste tilkoblingstillatelsen er midlertidig gyldig til."
+                },
+                "status": {
+                    "type": "string",
+                    "description": "Status"
+                },
+                "statusValue": {
+                    "type": "string",
+                    "description": "Statusverdi."
+                }
+            },
+            "description": "Oversikt over siste tilkoblingstillatelse til lokalitet."
+        },
+        "LicenseOverview": {
+            "type": "object",
+            "properties": {
+                "versionId": {
+                    "type": "integer",
+                    "description": "Unik identifikator for tillatelsesversjonen.",
+                    "format": "int64"
+                },
+                "licenseNr": {
+                    "type": "string",
+                    "description": "Tillatelsesnummer"
+                },
+                "originalLicenseNr": {
+                    "type": "string",
+                    "description": "Tillatelsesnummer slik det var da innehaveren fikk tillatelsen."
+                },
+                "legacyLicenseNr": {
+                    "type": "string",
+                    "description": "Arvet tillatelsesnummer."
+                },
+                "portfolioType": {
+                    "$ref": "#/components/schemas/LicensePortfolioType"
+                },
+                "portfolioMasterLicenseId": {
+                    "type": "integer",
+                    "description": "Unik identifikator for hovedtillatelsen i innehaverens portefølje over tillatelser.",
+                    "format": "int64"
+                },
+                "legalEntityNrId": {
+                    "type": "string",
+                    "description": "Juridisk-enhetsnummer-identifikator"
+                },
+                "openLegalEntityNr": {
+                    "type": "string",
+                    "description": "Åpent juridisk enhetsnummer."
+                },
+                "legalEntityName": {
+                    "type": "string",
+                    "description": "Juridisk enhetsnavn."
+                },
+                "productionRegime": {
+                    "type": "string",
+                    "description": "Regimet som produksjonsprosessen for den juridiske enheten opererer under."
+                },
+                "productionModel": {
+                    "type": "string",
+                    "description": "Modellen for hvordan produksjonsprosessen skal være."
+                },
+                "capacity": {
+                    "$ref": "#/components/schemas/CapacityInfo"
+                },
+                "type": {
+                    "$ref": "#/components/schemas/LicenseTypeOverview"
+                },
+                "species": {
+                    "$ref": "#/components/schemas/SpeciesOverview"
+                },
+                "connections": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/components/schemas/LatestLicenseSiteConnectionOverview"
+                    }
+                },
+                "placement": {
+                    "$ref": "#/components/schemas/AreaPlacement"
+                },
+                "version": {
+                    "$ref": "#/components/schemas/VersionOverview"
+                }
+            },
+            "description": "Oversikt over tillatelser som hører til innehaver."
+        },
+        "LicenseTypeOverview": {
+            "type": "object",
+            "properties": {
+                "intention": {
+                    "type": "string",
+                    "description": "Formålet med tillatelsestypen."
+                },
+                "intentionValue": {
+                    "type": "string",
+                    "description": "Formålsverdi"
+                },
+                "produces": {
+                    "type": "string",
+                    "description": "Hva som blir produsert på tillatelsen."
+                },
+                "producesValue": {
+                    "type": "string",
+                    "description": "Produksjonsverdi."
+                },
+                "productionStage": {
+                    "type": "string",
+                    "description": "Den nåværende fasen av produksjonsprosessen til tillatelsen."
+                },
+                "productionStageValue": {
+                    "type": "string",
+                    "description": "Verdien til produksjonsprosess-fasen."
+                },
+                "tag": {
+                    "type": "string",
+                    "description": "Etikett som f.eks. KOMM-MATF."
+                },
+                "allocationInformation": {
+                    "type": "string",
+                    "description": "Informasjon om fordelingen av ressurser på tillatelsen."
+                }
+            },
+            "description": "Oversikt over tillatelsestyper."
+        },
+        "SpeciesOverview": {
+            "type": "object",
+            "properties": {
+                "compositionId": {
+                    "type": "integer",
+                    "description": "Unik artskomposisjons-identifikator.",
+                    "format": "int64"
+                },
+                "fishCodes": {
+                    "type": "array",
+                    "description": "Liste over fiskekoder.",
+                    "items": {
+                        "type": "string",
+                        "description": "Liste over fiskekoder."
+                    }
+                }
+            },
+            "description": "Oversikt over arter."
+        },
+        "VersionOverview": {
+            "type": "object",
+            "properties": {
+                "validFrom": {
+                    "type": "string",
+                    "description": "Tidsstempel for når versjonen er gyldig fra."
+                },
+                "validUntil": {
+                    "type": "string",
+                    "description": "Tidsstempel for når versjonen er gyldig til."
+                },
+                "temporaryUntil": {
+                    "type": "string",
+                    "description": "Tidsstempel for når versjonen er midlertidig gyldig til."
+                },
+                "versionCauseType": {
+                    "type": "string",
+                    "description": "Årsakstype for versjonen."
+                },
+                "versionCauseTypeValue": {
+                    "type": "string",
+                    "description": "Årsakstype-verdi."
+                },
+                "status": {
+                    "type": "string",
+                    "description": "Status."
+                },
+                "statusValue": {
+                    "type": "string",
+                    "description": "Statusverdi."
+                }
+            },
+            "description": "Oversikt over versjoner."
+        },
+        "IntentionType": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "description": "Unik identifikator for formålstypen.",
+                    "format": "int32"
+                },
+                "value": {
+                    "type": "string",
+                    "description": "Verdi."
+                },
+                "localizedValue": {
+                    "type": "string",
+                    "description": "Lokalisert verdi."
+                },
+                "regulationName": {
+                    "type": "string",
+                    "description": "Navnet på reguleringen for formålet."
+                }
+            },
+            "description": "Informasjon om formålstypen."
+        },
+        "Address": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "description": "Unik identifikator for addressen.",
+                    "format": "int64"
+                },
+                "type": {
+                    "type": "string",
+                    "description": "Addressetypen."
+                },
+                "value": {
+                    "type": "string",
+                    "description": "Verdi."
+                },
+                "zipCode": {
+                    "type": "string",
+                    "description": "Postnummeret som addressen hører til."
+                },
+                "zipName": {
+                    "type": "string",
+                    "description": "Poststedet som addressen hører til."
+                },
+                "countyCode": {
+                    "type": "string",
+                    "description": "Fylkesnummeret som addressen hører til."
+                },
+                "countyName": {
+                    "type": "string",
+                    "description": "Fylkesnavnet hvor addressen er."
+                },
+                "countryCode": {
+                    "type": "string",
+                    "description": "Landskoden hvor addressen er."
+                },
+                "countryName": {
+                    "type": "string",
+                    "description": "Navnet på landet addressen ligger i."
+                },
+                "officialSourceType": {
+                    "type": "string",
+                    "description": "Offisiell kildetype for addressen."
+                }
+            },
+            "description": "Adresse."
+        },
+        "BusinessType": {
+            "type": "object",
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "description": "Verdi"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Navnet på virksomhetstypen."
+                }
+            },
+            "description": "Virksomhetstype."
+        },
+        "Entity": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Unik enhets identifikator."
+                },
+                "versionId": {
+                    "type": "integer",
+                    "description": "Unik versjons identifikator.",
+                    "format": "int64"
+                },
+                "openNr": {
+                    "type": "string",
+                    "description": "Åpent nummer."
+                },
+                "typeName": {
+                    "type": "string",
+                    "description": "Navnetypen"
+                },
+                "typeValue": {
+                    "type": "string",
+                    "description": "Typeverdien."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Navnet til enheten."
+                },
+                "businessTypes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/components/schemas/BusinessType"
+                    }
+                },
+                "officialSourceType": {
+                    "type": "string",
+                    "description": "Offisiell kildetype til enheten."
+                },
+                "addresses": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/components/schemas/Address"
+                    }
+                },
+                "industryCodes": {
+                    "type": "array",
+                    "description": "Liste av industrikoder som enheten har.",
+                    "items": {
+                        "type": "string",
+                        "description": "Liste av industrikoder som enheten har."
+                    }
+                },
+                "brregStatuses": {
+                    "type": "array",
+                    "description": "Liste av enhetens statuser i brønnøysundsregisteret.",
+                    "items": {
+                        "type": "string",
+                        "description": "Liste av enhetens statuser i brønnøysundsregisteret."
+                    }
+                },
+                "versionValidFrom": {
+                    "type": "string",
+                    "description": "Tidsstempel for når enhetsversjonen er gyldig fra."
+                },
+                "versionValidUntil": {
+                    "type": "string",
+                    "description": "Tidsstempel for når enhetsversjonen er gyldig til."
+                },
+                "versionRegisteredTime": {
+                    "type": "string",
+                    "description": "Tidsstempel for når enhetsversjonen er registrert."
+                },
+                "versionRegisteredBy": {
+                    "type": "string",
+                    "description": "Hvem som registrerte enhetsversjonen."
+                },
+                "status": {
+                    "type": "string",
+                    "description": "Status."
+                }
+            },
+            "description": "Enhet."
+        },
+        "SiteForLegalEntity": {
+            "type": "object",
+            "properties": {
+                "siteNr": {
+                    "type": "string",
+                    "description": "Lokalitetsnummer"
+                },
+                "siteName": {
+                    "type": "string",
+                    "description": "Navnet på lokaliteten."
+                },
+                "siteCapacity": {
+                    "type": "number",
+                    "description": "Tillatt kapasitet for den gitte lokaliteten.",
+                    "format": "double"
+                },
+                "siteTempCapacity": {
+                    "type": "number",
+                    "description": "Den midlertidige kapasiteten til en lokalitet.",
+                    "format": "double"
+                },
+                "siteCapacityUnitType": {
+                    "type": "string",
+                    "description": "Kapasitetsenheten som blir brukt for å beskrive kapasitetsmengden på lokaliteten. Oppgitt i f.eks. Tonn."
+                },
+                "sitePlacement": {
+                    "$ref": "#/components/schemas/AreaPlacement"
+                },
+                "connections": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/components/schemas/LicenseConnectionForSite"
+                    }
+                },
+                "validFrom": {
+                    "type": "string",
+                    "description": "Tidsstempel for når lokaliteten begynte å bli benyttet av den juridiske enheten."
+                },
+                "validUntil": {
+                    "type": "string",
+                    "description": "Tidsstempel for når lokaliteten blir benyttet til av den juridiske enheten."
+                },
+                "temporaryUntil": {
+                    "type": "string",
+                    "description": "Tidsstempel for når den gjeldende lokaliteten er midlertidig gyldig til for den juridiske enheten."
+                },
+                "status": {
+                    "type": "string",
+                    "description": "Status"
+                },
+                "statusValue": {
+                    "type": "string",
+                    "description": "Statusverdi"
+                }
+            },
+            "description": "Lokalitet som blir benyttet av gitt juridisk enhet."
+        },
+        "AreaListItem": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "description": "Unik identifikator.",
+                    "format": "int64"
+                },
+                "type": {
+                    "type": "string",
+                    "description": "Områdetypen"
+                },
+                "defaultCode": {
+                    "type": "string",
+                    "description": "Standardkode"
+                },
+                "defaultName": {
+                    "type": "string",
+                    "description": "Standardnavn"
+                },
+                "shortName": {
+                    "type": "string",
+                    "description": "Forkortelse av navnet på området lokaliteten ligger på."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Navnet på området lokaliteten ligger på."
+                },
+                "versionId": {
+                    "type": "integer",
+                    "description": "Unik versjonsidentifikator",
+                    "format": "int64"
+                },
+                "validFrom": {
+                    "type": "string",
+                    "description": "Tidsstempel for når lokaliteten ble godkjent til å benytte seg av området."
+                },
+                "validUntil": {
+                    "type": "string",
+                    "description": "Sluttid for når lokaliteten er godkjent til å benytte seg av området"
+                },
+                "versionNextId": {
+                    "type": "integer",
+                    "description": "Unik identifikator for neste versjon.",
+                    "format": "int64"
+                }
+            },
+            "description": "Geografisk informasjon om et spesifikt område."
+        }
+    }
+}

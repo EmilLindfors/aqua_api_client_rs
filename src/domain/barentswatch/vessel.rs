@@ -1,6 +1,47 @@
-use crate::fish_health::*;
-use serde::{Serialize, Deserialize};
+use crate::domain::{
+    api::{Endpoint, NoQuery},
+    generated::fish_health::{
+        BwApiApiVesselTrackWeeksModelsVesselInfo,
+        BwApiApiVesselTrackWeeksModelsVesselTrackLocalityWeek,
+    },
+};
+use serde::{Deserialize, Serialize};
 use std::fmt;
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct VesselLocalityParams {
+    pub locality: i32,
+    pub year: i32,
+    pub week: Option<i32>,
+}
+
+pub struct LocalityVesselVisitEndpoint;
+
+impl Endpoint for LocalityVesselVisitEndpoint {
+    type Query = NoQuery;
+    type Response = LocalityVesselVisits;
+    type PathParams = VesselLocalityParams;
+
+    fn path(params: &Self::PathParams) -> String {
+        if let Some(week) = params.week {
+            format!("/fishhealth/vessels/{}/{}", params.locality, week)
+        } else {
+            format!("/fishhealth/vessels/{}", params.locality)
+        }
+    }
+}
+
+pub struct VesselsEndpoint;
+
+impl Endpoint for VesselsEndpoint {
+    type Query = NoQuery;
+    type Response = Vessels;
+    type PathParams = ();
+
+    fn path(_: &Self::PathParams) -> String {
+        "/fishhealth/vessels".to_string()
+    }
+}
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Vessel {
@@ -17,17 +58,40 @@ pub struct Vessel {
 impl fmt::Display for Vessel {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         let mut res = String::new();
-        res.push_str(&format!("Vessel name: {}\n", self.vessel_name.as_ref().unwrap_or(&"".to_string())));
+        res.push_str(&format!(
+            "Vessel name: {}\n",
+            self.vessel_name.as_ref().unwrap_or(&"".to_string())
+        ));
         res.push_str(&format!("MMSI: {}\n", self.mmsi.unwrap_or(0)));
         res.push_str(&format!("Ship type: {}\n", self.ship_type.unwrap_or(0)));
-        res.push_str(&format!("Ship register vessel type: {}\n", self.ship_register_vessel_type.as_ref().unwrap_or(&"".to_string())));
-        res.push_str(&format!("Ship register vessel type name (EN): {}\n", self.ship_register_vessel_type_name_en.as_ref().unwrap_or(&"".to_string())));
-        res.push_str(&format!("Ship register vessel type name (NO): {}\n", self.ship_register_vessel_type_name_no.as_ref().unwrap_or(&"".to_string())));
-        res.push_str(&format!("Is slaughter boat: {}\n", self.is_slaughter_boat.unwrap_or(false)));
-        res.push_str(&format!("Is wellboat: {}\n", self.is_wellboat.unwrap_or(false)));
+        res.push_str(&format!(
+            "Ship register vessel type: {}\n",
+            self.ship_register_vessel_type
+                .as_ref()
+                .unwrap_or(&"".to_string())
+        ));
+        res.push_str(&format!(
+            "Ship register vessel type name (EN): {}\n",
+            self.ship_register_vessel_type_name_en
+                .as_ref()
+                .unwrap_or(&"".to_string())
+        ));
+        res.push_str(&format!(
+            "Ship register vessel type name (NO): {}\n",
+            self.ship_register_vessel_type_name_no
+                .as_ref()
+                .unwrap_or(&"".to_string())
+        ));
+        res.push_str(&format!(
+            "Is slaughter boat: {}\n",
+            self.is_slaughter_boat.unwrap_or(false)
+        ));
+        res.push_str(&format!(
+            "Is wellboat: {}\n",
+            self.is_wellboat.unwrap_or(false)
+        ));
 
         write!(f, "{}", res)
-
     }
 }
 
@@ -48,6 +112,17 @@ impl From<BwApiApiVesselTrackWeeksModelsVesselInfo> for Vessel {
 
 #[derive(Debug, Deserialize)]
 pub struct Vessels(pub Vec<Vessel>);
+
+impl TryFrom<ureq::Response> for Vessels {
+    type Error = crate::error::Error;
+
+    fn try_from(response: ureq::Response) -> Result<Self, Self::Error> {
+        let dto: Vec<BwApiApiVesselTrackWeeksModelsVesselInfo> =
+            response.into_json().map_err(crate::error::Error::from)?;
+
+        Ok(dto.into())
+    }
+}
 
 impl From<Vec<BwApiApiVesselTrackWeeksModelsVesselInfo>> for Vessels {
     fn from(dto: Vec<BwApiApiVesselTrackWeeksModelsVesselInfo>) -> Self {
@@ -88,6 +163,17 @@ pub struct VesselVisit {
 
 #[derive(Debug, Deserialize)]
 pub struct LocalityVesselVisits(pub Vec<VesselVisit>);
+
+impl TryFrom<ureq::Response> for LocalityVesselVisits {
+    type Error = crate::error::Error;
+
+    fn try_from(response: ureq::Response) -> Result<Self, Self::Error> {
+        let dto: Vec<BwApiApiVesselTrackWeeksModelsVesselTrackLocalityWeek> =
+            response.into_json().map_err(crate::error::Error::from)?;
+
+        Ok(dto.into())
+    }
+}
 
 impl From<BwApiApiVesselTrackWeeksModelsVesselTrackLocalityWeek> for LocalityVesselVisits {
     fn from(dto: BwApiApiVesselTrackWeeksModelsVesselTrackLocalityWeek) -> Self {

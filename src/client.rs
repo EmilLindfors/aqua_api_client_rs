@@ -1,66 +1,14 @@
 use crate::error::{Error, Result};
-use crate::fish_health::*;
-use crate::vessel::*;
+use crate::domain::generated::fish_health::*;
+use crate::domain::barentswatch::vessel::*;
 use lazy_static::lazy_static;
-use reqwest::{Client as ReqwestClient};
+
 use serde::Serialize;
 use serde::{de::DeserializeOwned, Deserialize};
 use std::collections::HashMap;
 use std::sync::Mutex;
 use std::time::{Duration, Instant};
 
-#[derive(Serialize, Deserialize, Debug)]
-pub struct LiceDistribution {
-    locality_no: i32,
-    year: i32,
-    week: i32,
-    avg_adult_female_lice: Option<f64>,
-    avg_mobile_lice: Option<f64>,
-    avg_stationary_lice: Option<f64>,
-}
-
-#[derive(Debug, Deserialize)]
-pub struct LocalityLiceDistribution(pub Vec<LiceDistribution>);
-
-impl From<BwApiApiFishhealthLocalityModelsLocalityLiceDistributionGraphDataDto>
-    for LocalityLiceDistribution
-{
-    fn from(dto: BwApiApiFishhealthLocalityModelsLocalityLiceDistributionGraphDataDto) -> Self {
-        let data = dto
-            .data
-            .into_iter()
-            .map(|x| LiceDistribution {
-                locality_no: dto.locality_no.unwrap_or(0),
-                year: dto.year.unwrap_or(0),
-                week: x.week.unwrap_or(0),
-                avg_adult_female_lice: x.avg_adult_female_lice.map(|y| (y * 100.0).round() / 100.0),
-                avg_mobile_lice: x.avg_mobile_lice.map(|y| (y * 100.0).round() / 100.0),
-                avg_stationary_lice: x.avg_stationary_lice.map(|y| (y * 100.0).round() / 100.0),
-            })
-            .collect();
-
-        Self(data)
-    }
-}
-
-#[derive(Debug, Deserialize)]
-struct TokenResponse {
-    access_token: String,
-    expires_in: u64,
-    token_type: String,
-    scope: String,
-}
-
-lazy_static! {
-    static ref TOKEN_CACHE: Mutex<Option<(String, Instant)>> = Mutex::new(None);
-}
-
-pub struct Client {
-    client: ReqwestClient,
-    base_url: String,
-    token_url: String,
-    config: Option<ClientConfig>,
-}
 
 #[derive(Clone)]
 pub struct ClientConfig {
@@ -71,7 +19,6 @@ pub struct ClientConfig {
 impl Client {
     pub fn new() -> Self {
         Self {
-            client: ReqwestClient::new(),
             base_url: "https://www.barentswatch.no/bwapi/v1/geodata".to_string(),
             token_url: "https://id.barentswatch.no/connect/token".to_string(),
             config: None,
@@ -80,7 +27,6 @@ impl Client {
 
     pub fn with_config(config: ClientConfig) -> Self {
         Self {
-            client: ReqwestClient::new(),
             base_url: "https://www.barentswatch.no/bwapi/v1/geodata".to_string(),
             token_url: "https://id.barentswatch.no/connect/token".to_string(),
             config: Some(config),
@@ -93,29 +39,19 @@ impl Client {
             .as_ref()
             .ok_or_else(|| Error::Auth("Config required for authentication".to_string()))?;
 
-        let mut form_params = HashMap::new();
-        form_params.insert("client_id", config.client_id.clone());
-        form_params.insert("scope", "api".to_string());
-        form_params.insert("client_secret", config.client_secret.clone());
-        form_params.insert("grant_type", "client_credentials".to_string());
+        let res = ureq::post(&self.token_url)
+            .send_form(&[("client_id", &config.client_id), ("scope", "api"), ("client_secret", &config.client_secret), ("grant_type", "client_credentials")])?;
 
-        let res = self
-            .client
-            .post(&self.token_url)
-            .form(&form_params)
-            .send()
-            .await?;
-
-        if !res.status().is_success() {
+        if !res.status() == 200 {
             let status = res.status();
-            let text = res.text().await?;
+            let text = res.into_string()?;
             return Err(Error::Token(format!(
                 "Token request failed: {} - {}",
                 status, text
             )));
         }
 
-        Ok(res.json::<TokenResponse>().await?)
+        Ok(res.into_json::<TokenResponse>()?)
     }
 
     async fn ensure_token(&self) -> Result<String> {
@@ -139,18 +75,18 @@ impl Client {
         let url = format!("{}{}", self.base_url, path);
         let token = self.ensure_token().await?;
 
-        let res = self.client.get(url).bearer_auth(token).send().await?;
+        let res = ureq::get(&url).set("Authorization", &format!("Bearer {}", token)).call()?;
 
-        if !res.status().is_success() {
+        if !res.status() == 200 {
             let status = res.status();
-            let text = res.text().await?;
-            return Err(Error::Api(format!(
-                "API request failed: {} - {}",
+            let text = res.into_string()?;
+            return Err(Error::Token(format!(
+                "Token request failed: {} - {}",
                 status, text
             )));
         }
 
-        Ok(res.json().await?)
+        Ok(res.into_json()?)
     }
 
     // Fish Health endpoints

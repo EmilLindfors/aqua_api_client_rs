@@ -1,4 +1,5 @@
-pub mod fish_health;
-pub mod client;
+//pub mod client;
+pub mod adapters;
+pub mod domain;
 pub mod error;
-pub mod vessel;
+//pub mod application;

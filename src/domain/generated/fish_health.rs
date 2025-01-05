@@ -86,7 +86,7 @@ pub mod error {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiAisModelsAisRestPositionDto {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -150,7 +150,7 @@ impl BwApiApiAisModelsAisRestPositionDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiAquacultureRegisterModelsAquaCultureSpeciesCategoryCount {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -299,7 +299,7 @@ impl BwApiApiAquacultureRegisterModelsAquaCultureSpeciesCategoryCount {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiAquacultureRegisterModelsDtoAquaCultureLocalityDto {
     #[serde(
@@ -441,7 +441,7 @@ impl BwApiApiAquacultureRegisterModelsDtoAquaCultureLocalityDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiAquacultureRegisterModelsDtoAquacultureLocalityLink {
     #[serde(
@@ -562,7 +562,7 @@ impl BwApiApiAquacultureRegisterModelsDtoAquacultureLocalityLink {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiAquacultureRegisterModelsDtoLicenseDto {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -688,7 +688,7 @@ impl BwApiApiAquacultureRegisterModelsDtoLicenseDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiAquacultureRegisterModelsDtoOrganizationDto {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -763,7 +763,7 @@ impl BwApiApiAquacultureRegisterModelsDtoOrganizationDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiAquacultureRegisterModelsDtoOrganizationNameIdDto {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -819,7 +819,7 @@ impl BwApiApiAquacultureRegisterModelsDtoOrganizationNameIdDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiAquacultureRegisterModelsDtoSpecies {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -999,7 +999,7 @@ impl BwApiApiAquacultureRegisterModelsDtoSpecies {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiCodSpawningGroundModelsCodSpawningGroundDto {
     #[serde(
@@ -1115,7 +1115,7 @@ impl BwApiApiCodSpawningGroundModelsCodSpawningGroundDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiControlAreasModelsControlAreaLinkV1 {
     #[serde(
@@ -1342,7 +1342,7 @@ impl BwApiApiControlAreasModelsControlAreaLinkV1 {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiControlAreasModelsIlaControlArea {
     #[serde(
@@ -1580,7 +1580,7 @@ impl BwApiApiControlAreasModelsIlaControlArea {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiControlAreasModelsIlaControlAreaDto {
     #[serde(
@@ -1792,7 +1792,7 @@ impl BwApiApiControlAreasModelsIlaControlAreaDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiControlAreasModelsIlaControlAreaLocalityLink {
     #[serde(
@@ -1999,7 +1999,7 @@ impl BwApiApiControlAreasModelsIlaControlAreaLocalityLink {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiControlAreasModelsPdControlArea {
     #[serde(
@@ -2237,7 +2237,7 @@ impl BwApiApiControlAreasModelsPdControlArea {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiControlAreasModelsPdControlAreaDto {
     #[serde(
@@ -2349,7 +2349,7 @@ impl BwApiApiControlAreasModelsPdControlAreaDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiControlAreasModelsPdControlAreaLocalityLink {
     #[serde(
@@ -2427,7 +2427,7 @@ impl BwApiApiControlAreasModelsPdControlAreaLocalityLink {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiCountyAndMunicipalityModelsEnvironmentalSurveysYearCount {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -2582,7 +2582,7 @@ for BwApiApiCountyAndMunicipalityModelsMomBCondition {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiCountyAndMunicipalityModelsMomBYearConditionCount {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -2768,7 +2768,7 @@ impl BwApiApiCountyAndMunicipalityModelsMomBYearConditionCount {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiCountyAndMunicipalityModelsMunicipalityArea {
     #[serde(
@@ -2859,7 +2859,7 @@ impl BwApiApiCountyAndMunicipalityModelsMunicipalityArea {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiCountyAndMunicipalityModelsMunicipalityCapacityStatistics {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -3018,7 +3018,7 @@ for BwApiApiCountyAndMunicipalityModelsMunicipalityCapacityType {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiCountyAndMunicipalityModelsMunicipalityFarmedFishEscapes {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -3085,7 +3085,7 @@ impl BwApiApiCountyAndMunicipalityModelsMunicipalityFarmedFishEscapes {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiCountyAndMunicipalityModelsMunicipalityFishHealthDiseaseStatistics {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -3159,7 +3159,7 @@ impl BwApiApiCountyAndMunicipalityModelsMunicipalityFishHealthDiseaseStatistics 
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiCountyAndMunicipalityModelsMunicipalityLocalityAreaStatistics {
     ///Area of localities in municipality, in ㎡
@@ -3230,7 +3230,7 @@ impl BwApiApiCountyAndMunicipalityModelsMunicipalityLocalityAreaStatistics {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiCountyAndMunicipalityModelsMunicipalityLocalityAreaStatisticsSummary {
     ///Date of when data was last updated
@@ -3297,7 +3297,7 @@ impl BwApiApiCountyAndMunicipalityModelsMunicipalityLocalityAreaStatisticsSummar
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiCountyAndMunicipalityModelsMunicipalityLocalityStatistics {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -3452,7 +3452,7 @@ for BwApiApiCountyAndMunicipalityModelsMunicipalityLocalityType {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiCountyAndMunicipalityModelsMunicipalityOrganization {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -3502,7 +3502,7 @@ impl BwApiApiCountyAndMunicipalityModelsMunicipalityOrganization {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiCountyAndMunicipalityModelsMunicipalityRealAreaUsage {
     #[serde(
@@ -3572,7 +3572,7 @@ impl BwApiApiCountyAndMunicipalityModelsMunicipalityRealAreaUsage {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiCountyAndMunicipalityModelsMunicipalityRiverCatchCount {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -3642,7 +3642,7 @@ impl BwApiApiCountyAndMunicipalityModelsMunicipalityRiverCatchCount {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiCountyAndMunicipalityModelsMunicipalitySalmonLiceReportsModel {
     #[serde(
@@ -3747,7 +3747,7 @@ impl BwApiApiCountyAndMunicipalityModelsMunicipalitySalmonLiceReportsModel {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiCountyAndMunicipalityModelsMunicipalityTreatmentCount {
     #[serde(
@@ -3865,7 +3865,7 @@ impl BwApiApiCountyAndMunicipalityModelsMunicipalityTreatmentCount {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiEscapesModelsEscapesGraphDataDto {
     #[serde(default, skip_serializing_if = "::std::vec::Vec::is_empty")]
@@ -3913,7 +3913,7 @@ impl BwApiApiEscapesModelsEscapesGraphDataDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiEscapesModelsEscapesWeekDataDto {
     #[serde(
@@ -3969,7 +3969,7 @@ impl BwApiApiEscapesModelsEscapesWeekDataDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiExportRestrictionsModelsExportRestrictionAreaLink {
     #[serde(
@@ -4036,7 +4036,7 @@ impl BwApiApiExportRestrictionsModelsExportRestrictionAreaLink {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiExportRestrictionsModelsExportRestrictionDto {
     #[serde(default, skip_serializing_if = "::std::vec::Vec::is_empty")]
@@ -4228,7 +4228,7 @@ impl BwApiApiExportRestrictionsModelsExportRestrictionDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFairwaysModelsFairwayDto {
     ///Fairway number
@@ -4469,7 +4469,7 @@ impl BwApiApiFairwaysModelsFairwayDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFarmedFishEscapeModelsFarmedFishEscapeDto {
     #[serde(
@@ -4691,7 +4691,7 @@ impl BwApiApiFarmedFishEscapeModelsFarmedFishEscapeDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFarmedFishEscapeModelsFarmedFishEscapeWeekDto {
     #[serde(default, skip_serializing_if = "::std::vec::Vec::is_empty")]
@@ -4748,7 +4748,7 @@ impl BwApiApiFarmedFishEscapeModelsFarmedFishEscapeWeekDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFarmedFishEscapeModelsLocalityEscapesGraphDataDto {
     #[serde(default, skip_serializing_if = "::std::vec::Vec::is_empty")]
@@ -4831,7 +4831,7 @@ impl BwApiApiFarmedFishEscapeModelsLocalityEscapesGraphDataDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFishhealthDiseaseHistoryModelsDiseaseZoneHistory {
     #[serde(
@@ -5006,7 +5006,7 @@ impl BwApiApiFishhealthDiseaseHistoryModelsDiseaseZoneHistory {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFishhealthDownloadModelsLocalityWeekExportDto {
     #[serde(
@@ -5255,7 +5255,7 @@ impl BwApiApiFishhealthDownloadModelsLocalityWeekExportDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFishhealthDownloadModelsLocalityWeekIlaPdExportDto {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -5484,7 +5484,7 @@ impl BwApiApiFishhealthDownloadModelsLocalityWeekIlaPdExportDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFishhealthDownloadModelsTreatmentsExportDto {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -5639,7 +5639,7 @@ impl BwApiApiFishhealthDownloadModelsTreatmentsExportDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFishhealthLocalityModelsAllTreatmentsGraphDataDto {
     #[serde(default, skip_serializing_if = "::std::vec::Vec::is_empty")]
@@ -5704,7 +5704,7 @@ impl BwApiApiFishhealthLocalityModelsAllTreatmentsGraphDataDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFishhealthLocalityModelsAnnualDiseaseCaseDetail {
     #[serde(
@@ -5773,7 +5773,7 @@ impl BwApiApiFishhealthLocalityModelsAnnualDiseaseCaseDetail {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFishhealthLocalityModelsAnnualDiseaseDataDto {
     #[serde(default, skip_serializing_if = "::std::vec::Vec::is_empty")]
@@ -5834,7 +5834,7 @@ impl BwApiApiFishhealthLocalityModelsAnnualDiseaseDataDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFishhealthLocalityModelsCleanerFishTreatment {
     #[serde(
@@ -5891,7 +5891,7 @@ impl BwApiApiFishhealthLocalityModelsCleanerFishTreatment {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFishhealthLocalityModelsDiseaseCount {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -5962,7 +5962,7 @@ impl BwApiApiFishhealthLocalityModelsDiseaseCount {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFishhealthLocalityModelsDiseasePeriodDto {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -6046,7 +6046,7 @@ impl BwApiApiFishhealthLocalityModelsDiseasePeriodDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFishhealthLocalityModelsLocalitiesOverLimitByWeek {
     #[serde(
@@ -6109,7 +6109,7 @@ impl BwApiApiFishhealthLocalityModelsLocalitiesOverLimitByWeek {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFishhealthLocalityModelsLocalitiesOverLimitByYear {
     #[serde(
@@ -6181,7 +6181,7 @@ impl BwApiApiFishhealthLocalityModelsLocalitiesOverLimitByYear {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFishhealthLocalityModelsLocalitiesOverLimitByYearAndRegion {
     #[serde(
@@ -6335,7 +6335,7 @@ impl BwApiApiFishhealthLocalityModelsLocalitiesOverLimitByYearAndRegion {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFishhealthLocalityModelsLocalityDto {
     #[serde(
@@ -6512,7 +6512,7 @@ impl BwApiApiFishhealthLocalityModelsLocalityDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFishhealthLocalityModelsLocalityGraphDataDto {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -6579,7 +6579,7 @@ impl BwApiApiFishhealthLocalityModelsLocalityGraphDataDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFishhealthLocalityModelsLocalityIlaPdLink {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -6671,7 +6671,7 @@ impl BwApiApiFishhealthLocalityModelsLocalityIlaPdLink {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFishhealthLocalityModelsLocalityLiceCountDto {
     #[serde(
@@ -6766,7 +6766,7 @@ impl BwApiApiFishhealthLocalityModelsLocalityLiceCountDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFishhealthLocalityModelsLocalityLiceDistributionGraphDataDto {
     #[serde(default, skip_serializing_if = "::std::vec::Vec::is_empty")]
@@ -6860,7 +6860,7 @@ impl BwApiApiFishhealthLocalityModelsLocalityLiceDistributionGraphDataDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFishhealthLocalityModelsLocalityLiceDistributionGraphDataWeekDto {
     #[serde(
@@ -6952,7 +6952,7 @@ impl BwApiApiFishhealthLocalityModelsLocalityLiceDistributionGraphDataWeekDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFishhealthLocalityModelsLocalityLiceGraphDataDto {
     #[serde(default, skip_serializing_if = "::std::vec::Vec::is_empty")]
@@ -7017,7 +7017,7 @@ impl BwApiApiFishhealthLocalityModelsLocalityLiceGraphDataDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFishhealthLocalityModelsLocalityNameIdDto {
     ///Site ID
@@ -7088,7 +7088,7 @@ impl BwApiApiFishhealthLocalityModelsLocalityNameIdDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFishhealthLocalityModelsLocalityNameIdMunicipalityDto {
     /**The version of the AquaCultureRegistry this locality is from. (The same physical locality can be registered in multiple
@@ -7249,7 +7249,7 @@ impl BwApiApiFishhealthLocalityModelsLocalityNameIdMunicipalityDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFishhealthLocalityModelsLocalityReportV1 {
     #[serde(
@@ -7444,7 +7444,7 @@ impl BwApiApiFishhealthLocalityModelsLocalityReportV1 {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFishhealthLocalityModelsLocalitySeaTemperatureGraphDataDto {
     ///Value will be null if no temperature has be reported for a week and for all future weeks in year
@@ -7536,7 +7536,7 @@ impl BwApiApiFishhealthLocalityModelsLocalitySeaTemperatureGraphDataDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFishhealthLocalityModelsLocalityWeekData {
     #[serde(default, skip_serializing_if = "::std::vec::Vec::is_empty")]
@@ -7608,7 +7608,7 @@ impl BwApiApiFishhealthLocalityModelsLocalityWeekData {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFishhealthLocalityModelsMedicinalTreatmentDto {
     #[serde(
@@ -7765,7 +7765,7 @@ impl BwApiApiFishhealthLocalityModelsMedicinalTreatmentDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFishhealthLocalityModelsNationalReportV1 {
     ///List of escapes (from all sites in this summary) this week. Data from Fiskeridirektoratet.
@@ -7972,7 +7972,7 @@ impl BwApiApiFishhealthLocalityModelsNationalReportV1 {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFishhealthLocalityModelsTreatmentGraphDataWeek {
     #[serde(
@@ -8078,7 +8078,7 @@ impl BwApiApiFishhealthLocalityModelsTreatmentGraphDataWeek {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiFishhealthLocalityModelsWeekSeaTemparatureDto {
     #[serde(
@@ -8243,7 +8243,7 @@ impl BwApiApiFishhealthLocalityModelsWeekSeaTemparatureDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiForbiddenMedicinalZonesModelsForbiddenMedicinalZoneBadebehandling {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -8414,7 +8414,7 @@ impl BwApiApiForbiddenMedicinalZonesModelsForbiddenMedicinalZoneBadebehandling {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiForbiddenMedicinalZonesModelsForbiddenMedicinalZoneKitinsyntesehemmere {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -8522,7 +8522,7 @@ impl BwApiApiForbiddenMedicinalZonesModelsForbiddenMedicinalZoneKitinsyntesehemm
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiIlaPdCasesModelsIlaPdCase {
     #[serde(
@@ -8658,7 +8658,7 @@ impl BwApiApiIlaPdCasesModelsIlaPdCase {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiIlaPdCasesModelsIlaPdCaseDetail {
     #[serde(
@@ -8949,7 +8949,7 @@ for BwApiApiIlaPdCasesModelsIlaPdCaseDiseaseSubType {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiIlaPdsModelsIlaPd {
     ///PD or ILA
@@ -9041,7 +9041,7 @@ impl BwApiApiIlaPdsModelsIlaPd {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiIlaPdsModelsNewIlapdCasesGraphDataDto {
     #[serde(
@@ -9125,7 +9125,7 @@ impl BwApiApiIlaPdsModelsNewIlapdCasesGraphDataDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiIlaPdsModelsNewIlapdCasesWeekDataDto {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -9288,7 +9288,7 @@ impl BwApiApiIlaPdsModelsNewIlapdCasesWeekDataDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiIlaPdsModelsPdZone {
     #[serde(
@@ -9459,7 +9459,7 @@ for BwApiApiLicereportModelsLiceReportAmountUnit {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiLicereportModelsLiceReportCleanerFish {
     #[serde(
@@ -9530,7 +9530,7 @@ impl BwApiApiLicereportModelsLiceReportCleanerFish {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiLicereportModelsLiceReportCleanerFishDetail {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -9602,7 +9602,7 @@ impl BwApiApiLicereportModelsLiceReportCleanerFishDetail {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiLicereportModelsLiceReportCombinationTreatment {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -9775,7 +9775,7 @@ for BwApiApiLicereportModelsLiceReportConcentrationUnit {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiLicereportModelsLiceReportMechanicalRemoval {
     #[serde(
@@ -9865,7 +9865,7 @@ impl BwApiApiLicereportModelsLiceReportMechanicalRemoval {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiLicereportModelsLiceReportMedicinalTreatment {
     #[serde(
@@ -10084,7 +10084,7 @@ for BwApiApiLicereportModelsLiceReportMedicinalTreatmentType {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiLicereportModelsLiceReportNonMedicinalTreatment {
     #[serde(
@@ -10261,7 +10261,7 @@ for BwApiApiLicereportModelsLiceReportNonMedicinalTreatmentType {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiLicereportModelsLiceReportSpecies {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -10311,7 +10311,7 @@ impl BwApiApiLicereportModelsLiceReportSpecies {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiLicereportModelsLiceReportSubstance {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -10384,7 +10384,7 @@ impl BwApiApiLicereportModelsLiceReportSubstance {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiLicereportModelsLiceReportTreatment {
     #[serde(
@@ -10482,7 +10482,7 @@ impl BwApiApiLicereportModelsLiceReportTreatment {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiLicereportModelsLiceReportTreatmentDetail {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -10661,7 +10661,7 @@ impl BwApiApiLicereportModelsLiceReportTreatmentDetail {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiLicereportModelsLocalityWeek {
     #[serde(
@@ -10975,7 +10975,7 @@ impl BwApiApiLicereportModelsLocalityWeek {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiMaritimeBoundaryModelsMaritimeBoundaryDto {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -11031,7 +11031,7 @@ impl BwApiApiMaritimeBoundaryModelsMaritimeBoundaryDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiPayoutModelsPayoutModel {
     #[serde(
@@ -11294,7 +11294,7 @@ for BwApiApiProductionAreasModelsColor {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiProductionAreasModelsProductionArea {
     ///Color according to produksjonsområdeforskriften, and validity dates
@@ -11357,7 +11357,7 @@ impl BwApiApiProductionAreasModelsProductionArea {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiProductionAreasModelsProductionAreaAquaCultureData {
     #[serde(
@@ -11432,7 +11432,7 @@ impl BwApiApiProductionAreasModelsProductionAreaAquaCultureData {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiProductionAreasModelsProductionAreaColor {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -11505,7 +11505,7 @@ impl BwApiApiProductionAreasModelsProductionAreaColor {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiProductionAreasModelsProductionAreaWeek {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -11759,7 +11759,7 @@ impl BwApiApiProductionAreasModelsProductionAreaWeek {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiProtectedAreasModelsProtectedArea {
     #[serde(
@@ -11919,7 +11919,7 @@ impl BwApiApiProtectedAreasModelsProtectedArea {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiRiverCatchModelsRiverCatchModel {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -12087,7 +12087,7 @@ impl BwApiApiRiverCatchModelsRiverCatchModel {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiSalmonFjordModelsSalmonFjordDto {
     #[serde(
@@ -12154,7 +12154,7 @@ impl BwApiApiSalmonFjordModelsSalmonFjordDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiSalmonLiceLocalitiesAboveLiceLimitCount {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -12213,7 +12213,7 @@ impl BwApiApiSalmonLiceLocalitiesAboveLiceLimitCount {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiSalmonLiceLocalitiesAboveLiceLimitGraphDataDto {
     #[serde(
@@ -12522,7 +12522,7 @@ impl BwApiApiSalmonLiceLocalitiesAboveLiceLimitGraphDataDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiSalmonRiversModelsSalmonRiver {
     ///Alternative name. This may be null.
@@ -12663,7 +12663,7 @@ impl BwApiApiSalmonRiversModelsSalmonRiver {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiShellSandAreaModelsShellSandAreaModel {
     #[serde(
@@ -12852,7 +12852,7 @@ impl BwApiApiShellSandAreaModelsShellSandAreaModel {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiShrimpFishingGroundsModelsDtoShrimpFishingGroundDto {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -12957,7 +12957,7 @@ impl BwApiApiShrimpFishingGroundsModelsDtoShrimpFishingGroundDto {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiSlaughterhouseModelsSlaughterhouseDetails {
     ///ISA protection zones this slaughterhouse is in, if any.
@@ -13067,7 +13067,7 @@ impl BwApiApiSlaughterhouseModelsSlaughterhouseDetails {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiSlaughterhouseModelsSlaughterhouseLicense {
     #[serde(
@@ -13253,7 +13253,7 @@ impl BwApiApiSlaughterhouseModelsSlaughterhouseLicense {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiSlaughterhouseModelsSlaughterhouseLocality {
     #[serde(
@@ -13344,7 +13344,7 @@ impl BwApiApiSlaughterhouseModelsSlaughterhouseLocality {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiVesselTrackWeeksModelsDisease {
     ///PD or ILA
@@ -13715,7 +13715,7 @@ for BwApiApiVesselTrackWeeksModelsDiseaseZoneType {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiVesselTrackWeeksModelsDiseaseZoneVisit {
     #[serde(
@@ -13832,7 +13832,7 @@ impl BwApiApiVesselTrackWeeksModelsDiseaseZoneVisit {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiVesselTrackWeeksModelsTrackAnalysis {
     ///List of passages through disease zones.
@@ -13956,7 +13956,7 @@ impl BwApiApiVesselTrackWeeksModelsTrackAnalysis {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiVesselTrackWeeksModelsVesselInfo {
     ///True if the vessel has a valid slaughterboat (bløggebåt) license from Mattilsynet this week
@@ -14272,7 +14272,7 @@ impl BwApiApiVesselTrackWeeksModelsVesselInfo {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiVesselTrackWeeksModelsVesselPosition {
     ///Ship dimension: Meters from the AIS antenna to the bow
@@ -14457,7 +14457,7 @@ impl BwApiApiVesselTrackWeeksModelsVesselPosition {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiVesselTrackWeeksModelsVesselTrack {
     ///Timestamp of the first point in the track.
@@ -14565,7 +14565,7 @@ impl BwApiApiVesselTrackWeeksModelsVesselTrack {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiVesselTrackWeeksModelsVesselTrackLocalityWeek {
     /**If the analysis is based on the surface area of the aquaculture site. If false, the point location from the
@@ -14690,7 +14690,7 @@ impl BwApiApiVesselTrackWeeksModelsVesselTrackLocalityWeek {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiVesselTrackWeeksModelsVesselTrackWaypoint {
     /**A System.Collections.Generic.List`1 that is equal if its members are equal.
@@ -14848,7 +14848,7 @@ impl BwApiApiVesselTrackWeeksModelsVesselTrackWaypoint {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiVesselTrackWeeksModelsVesselTrackWeek {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -15017,7 +15017,7 @@ impl BwApiApiVesselTrackWeeksModelsVesselTrackWeek {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct BwApiApiVesselTrackWeeksModelsVesselVisit {
     #[serde(
@@ -15215,7 +15215,7 @@ impl BwApiApiVesselTrackWeeksModelsVesselVisit {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(tag = "type", content = "coordinates")]
 pub enum GeoJsonGeometry {
     ///GeoJson Point Geometry
@@ -15280,7 +15280,7 @@ for GeoJsonGeometry {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 pub struct MicrosoftAspNetCoreMvcProblemDetails {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
     pub detail: ::std::option::Option<::std::string::String>,
@@ -15330,7 +15330,7 @@ impl MicrosoftAspNetCoreMvcProblemDetails {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct NetTopologySuiteGeometriesCoordinateEqualityComparer {}
 impl ::std::convert::From<&NetTopologySuiteGeometriesCoordinateEqualityComparer>
@@ -15429,7 +15429,7 @@ impl NetTopologySuiteGeometriesCoordinateEqualityComparer {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct NetTopologySuiteGeometriesCoordinateSequence {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -15515,7 +15515,7 @@ impl NetTopologySuiteGeometriesCoordinateSequence {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct NetTopologySuiteGeometriesCoordinateSequenceFactory {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -15720,7 +15720,7 @@ for NetTopologySuiteGeometriesDimension {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct NetTopologySuiteGeometriesEnvelope {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -15831,7 +15831,7 @@ impl NetTopologySuiteGeometriesEnvelope {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct NetTopologySuiteGeometriesGeometryFactory {
     #[serde(
@@ -15889,7 +15889,7 @@ impl NetTopologySuiteGeometriesGeometryFactory {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct NetTopologySuiteGeometriesGeometryOverlay {}
 impl ::std::convert::From<&NetTopologySuiteGeometriesGeometryOverlay>
@@ -16725,7 +16725,7 @@ impl NetTopologySuiteGeometriesGeometryOverlay {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct NetTopologySuiteGeometriesLineString {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -17737,7 +17737,7 @@ impl NetTopologySuiteGeometriesLineString {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct NetTopologySuiteGeometriesLinearRing {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -18939,7 +18939,7 @@ for NetTopologySuiteGeometriesOrdinates {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct NetTopologySuiteGeometriesPolygon {
     #[serde(default, skip_serializing_if = "::std::option::Option::is_none")]
@@ -19151,7 +19151,7 @@ impl NetTopologySuiteGeometriesPolygon {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct NetTopologySuiteGeometriesPrecisionModel {
     #[serde(
@@ -19320,7 +19320,7 @@ for NetTopologySuiteGeometriesPrecisionModels {
 ///}
 /// ```
 /// </details>
-#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug, PartialEq)]
+#[derive(::serde::Deserialize, ::serde::Serialize, Clone, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct NetTopologySuiteNtsGeometryServices {
     #[serde(

@@ -115,8 +115,8 @@ fn write_to_csv<T: serde::Serialize>(
     Ok(())
 }
 
-#[tokio::main]
-async fn main() -> Result<(), Box<dyn std::error::Error>> {
+
+fn main() -> Result<(), Box<dyn std::error::Error>> {
     let cli = Cli::parse();
     dotenvy::dotenv().ok();
 
